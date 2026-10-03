@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/abdoulrl2028-cloud-Dev/abdoulrl2028-cloud-Dev/main/assets/projects/gesture.jpg" alt="Reconhecimento de gestos" width="100%">
+</p>
+
 # Gesture Recognition ML
 
 Projeto exemplo para captura, preprocessamento, treino e detecção em tempo real de gestos usando webcam.
