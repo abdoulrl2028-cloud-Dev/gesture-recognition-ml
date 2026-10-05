@@ -1,45 +1,43 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/abdoulrl2028-cloud-Dev/abdoulrl2028-cloud-Dev/main/assets/projects/gesture.jpg" alt="Reconhecimento de gestos" width="100%">
+  <img src="https://raw.githubusercontent.com/abdoulrl2028-cloud-Dev/abdoulrl2028-cloud-Dev/main/assets/projects/gesture.jpg" alt="Gesture recognition" width="100%">
 </p>
 
 # Gesture Recognition ML
 
-Projeto exemplo para captura, preprocessamento, treino e detecção em tempo real de gestos usando webcam.
+Sample project that captures, preprocesses, trains, and detects gestures in real time with a webcam. Built with Python, OpenCV, and machine learning.
 
-Estrutura:
+## Structure
 
-- `captura.py` - coleta imagens de gestos usando webcam (salva em `dataset/<gesture>`)
-- `preprocessamento.py` - carrega e prepara imagens como arrays numpy
-- `modelo.py` - define e treina um modelo CNN (Keras/TensorFlow)
-- `detector.py` - carrega o modelo salvo e faz inferência em tempo real
-- `automacao.py` - mapeia gestos detectados para ações (usa `pyautogui`)
-- `main.py` - CLI para `collect`, `train`, `detect`
-- `requirements.txt` - dependências
+- `captura.py` — collects gesture images from the webcam into `dataset/<gesture>`
+- `preprocessamento.py` — loads images and prepares NumPy arrays
+- `modelo.py` — defines and trains a CNN (Keras/TensorFlow)
+- `detector.py` — loads the saved model and runs live inference
+- `automacao.py` — maps detected gestures to actions (`pyautogui`)
+- `main.py` — CLI for `collect`, `train`, and `detect`
+- `requirements.txt` — dependencies
 
-Exemplos de uso:
+## Examples
 
-Coletar imagens para um gesto:
+Collect images for a gesture:
 
 ```bash
 python main.py collect thumbs_up --samples 300
 ```
 
-Treinar o modelo a partir da pasta `dataset`:
+Train from the `dataset` folder:
 
 ```bash
 python main.py train --data dataset --out model --epochs 20
 ```
 
-Detectar em tempo real e executar ações mapeadas:
+Detect live and run the mapped actions:
 
 ```bash
 python main.py detect --model-dir model --threshold 0.75
 ```
 
-Notas:
+## Notes
 
-- Ajuste `img_size` em `preprocessamento.py` e `detector.py` se desejar resolução diferente.
-- `pyautogui` pode exigir permissões; em Linux talvez seja necessário instalar dependências do sistema.
-- Para um conjunto pequeno de dados, aumente `epochs` e faça augmentação manualmente.
-# gesture-recognition-ml
-Sistema de Interpretação de Gestos com Python, OpenCV e Machine Learning
+- Change `img_size` in `preprocessamento.py` and `detector.py` if you want a different resolution.
+- `pyautogui` may need extra permissions. On Linux you may need system packages.
+- For a small dataset, raise `epochs` and add augmentation yourself.
